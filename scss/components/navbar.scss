@@ -29,4 +29,14 @@
       outline: none;
     }
   }
+
+  .nav > .disabled > a {
+    color: $text-color-inverse;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $text-color-inverse;
+    }
+  }
 }

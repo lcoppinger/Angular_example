@@ -347,15 +347,15 @@
 //key information section
 .key_information_wrapper {
   padding: 60px 10%;
-  background: url('/sites/all/themes/masterclass/Images/Info_background.png') no-repeat center;
+  background: url('../Images/App_background.svg') no-repeat center;
   background-size: cover;
 
   @media(min-width: $screen-md-min) {
-    background: url('/sites/all/themes/masterclass/Images/Info_background.png') no-repeat 0 top;
+    background: url('../Images/App_background.svg') no-repeat 0 top;
   }
 
   @media(min-width: $screen-lg-min) {
-    background: url('/sites/all/themes/masterclass/Images/Info_background.png') no-repeat right fixed;
+    background: url('../Images/App_background.svg') no-repeat fixed;
   }
 
   .col-md-6 {
@@ -407,13 +407,13 @@
 }
 
 .top_tips_wrapper {
-  background: url('/sites/all/themes/masterclass/Images/top_tips.png') no-repeat center fixed;
+  background: url('../Images/App_background_2.svg') no-repeat center;
   background-size: cover;
   overflow: hidden;
   padding: 55px 0;
 
   @media(min-width: $screen-md-min) {
-    background: url('/sites/all/themes/masterclass/Images/top_tips.png') no-repeat center;
+    background: url('../Images/App_background_2.svg') no-repeat fixed;
   }
 
   .tile {
