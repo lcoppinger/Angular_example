@@ -1,0 +1,35 @@
+.footer {
+  @extend %base-font;
+  background-color: $background-default;
+  border-top: 5px solid $border--b;
+  color: $text-color-default;
+  margin: 0;
+  padding: 40px 0;
+
+  .footer_wib {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .footer_spark {
+    width: 50%;
+
+    @media(min-width: $screen-sm-min) {
+      width: 25%;
+    }
+
+    @media(min-width: $screen-md-min) {
+      width: 100%;
+    }
+  }
+
+  a {
+    color: $text-color-highlight;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: darken($text-color-highlight, 20%);
+    }
+  }
+}

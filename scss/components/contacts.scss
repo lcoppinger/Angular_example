@@ -1,0 +1,46 @@
+.block_case-studies {
+  background-color: $background-case-study;
+  color: $text-color-default;
+  padding: 15px 0;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  .img-circle img {
+    width: 140px;
+    height: 140px;
+    background-color: $background-default;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  .linkedIn {
+    background: url('../Images/linkedin_icon_dark.svg') no-repeat center;
+    background-size: auto 30px;
+  }
+
+  .email {
+    background: url('../Images/Email_icon_dark.png') no-repeat center;
+    background-size: auto 30px;
+  }
+}
+
+.catagory_wrapper {
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+
+.contact__wrapper {
+  @extend .block_case-studies;
+
+  h4 {
+    @extend %subtitle-font;
+    font-family: $regular__font-family__Lato;
+  }
+  .profile_buttons {
+    padding-top: 10px;
+  }
+}

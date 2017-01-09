@@ -1,0 +1,445 @@
+//landing section styling
+.vidContain {
+  background: url("../Images/poster.jpg") no-repeat center;
+  background-size: cover;
+  margin-top: -1px;
+
+  .vid {
+    display: none;
+    overflow: hidden;
+
+    @media(min-width: $screen-lg-min) {
+      display: block;
+    }
+  }
+
+  #home_intro_video {
+    transform: scale(1.5);
+  }
+
+  .header_wrapper {
+    position: relative;
+    top:0;
+    padding-top: 60px;
+
+    h1 {
+      @extend %title-font;
+      display: inline-block;
+      margin: 0;
+      padding: 15px 10px;
+    }
+
+    @media(min-width: $screen-lg-min) {
+      position: absolute;
+      width: 80%;
+    }
+  }
+
+  .Digital {
+    display: inline-block;
+    background-color: $background-dark;
+    color: $text-color-inverse;
+  }
+
+  .Masterclass {
+    display: inline-block;
+    background-color: $background-light;
+    color: $text-color-default;
+    margin-left: -3px;
+  }
+
+  .caption {
+    @extend %caption-font;
+    color: $text-color-inverse;
+    padding-top: 10px;
+    margin-bottom: 36px;
+
+    @media(min-width: $screen-lg-min) {
+      width: 550px;
+      padding: 10px 0;
+    }
+  }
+
+  .intro {
+    color: $text-color-inverse;
+    margin-bottom: 30px;
+
+    h3 {
+      @extend %subtitle-font;
+    }
+  }
+
+  .sections_wrapper {
+    overflow: hidden;
+    bottom: 0;
+    position: relative;
+    background-color: $background-dark;
+    color: $text-color-inverse;
+    padding: 30px 0;
+    width: 100%;
+
+    @media(min-width: $screen-sm-min) {
+      padding: 30px 0 0;
+    }
+
+    @media(min-width: $screen-md-min) {
+      padding: 30px 0;
+    }
+
+    @media(min-width: $screen-lg-min) {
+      position: absolute;
+      padding: 30px 0;
+    }
+  }
+
+  .homepage-sections {
+    border-bottom: 1px solid $border--c;
+    padding: 30px 0;
+
+    .section-title {
+      @extend %heading-font;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      @extend %base-font;
+      font-family: $light__font-family__Lato;
+      margin-bottom: 20px;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    @media(min-width: $screen-sm-min) {
+      border-bottom: none;
+      padding: 0 30px 30px;
+    }
+
+    @media(min-width: $screen-md-min) {
+      border-left: 1px solid $border--c;
+      border-bottom: none;
+      padding: 0 30px;
+
+      &:first-child {
+        padding-left: 0;
+        border-left: none;
+      }
+    }
+  }
+}
+
+//section divider styling
+.divider {
+  @extend %subtitle-font;
+  color: $text-color-inverse;
+  background-color:$background-divider;
+  text-align: center;
+  padding: 10px;
+  z-index: 2;
+
+  h2 {
+    margin: 0;
+  }
+
+  .arrow {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid $background-divider;
+    position: absolute;
+    left: 42%;
+
+    @media(min-width: $screen-sm-min) {
+      left: 46%;
+    }
+
+    @media(min-width: $screen-md-min) {
+      left: 48%;
+    }
+  }
+}
+
+//featurette section styling
+.featurette {
+  text-align: center;
+  padding: 30px 0;
+
+  @media(min-width: $screen-md-min) {
+    padding: 60px 0;
+  }
+
+  .img-circle {
+    width: 140px;
+    height: 140px;
+    background-color: $off-white;
+    border-radius: 50%;
+    display: inline-block;
+    border: 3px solid $grey;
+  }
+
+  h2 {
+    @extend %featurette-font;
+  }
+
+  p {
+    @extend %base-font;
+    font-family: $light__font-family__Lato;
+  }
+
+  .col-centered {
+    height: 220px;
+  }
+
+  .card {
+    height: 100%;
+    position: relative;
+    background-color: $background-modal;
+  }
+
+  .pad {
+    background-color: $background-default;
+    position: relative;
+    height: 100%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .front {
+    h4 {
+      @extend %heading-font;
+      color: $text-color-inverse;
+      width: 100%;
+      bottom: 0;
+      margin: 0;
+      padding: 10px;
+      position: absolute;
+      background-color: $background-dark;
+    }
+  }
+
+  .back {
+    @extend %base-font;
+    padding: 10px;
+
+    h4 {
+      @extend %heading-font;
+      margin: 0;
+      padding: 10px;
+    }
+
+    p {
+      margin-bottom: 3px;
+    }
+
+    .internal_link a {
+      color: $text-color-highlight;
+
+      &:hover,
+      :focus,
+      :active {
+        color: darken($text-color-highlight, 20%);
+      }
+    }
+  }
+
+  //specific overrides
+
+  .background__speakers {
+    width: 100%;
+
+    img {
+      height: 100%;
+      width: auto;
+      display: inline-block;
+    }
+  }
+
+  .background__case {
+    img {
+      height: auto;
+      vertical-align: middle;
+      position: relative;
+      top: 20px;
+    }
+  }
+
+  .background__pres {
+    img {
+      width: 100%;
+    }
+  }
+
+  //flip
+  /* -- make sure to declare a default for every property that you want animated -- */
+  /* -- general styles, including Y axis rotation -- */
+  .card .front {
+    position: absolute;
+    top: 0;
+    z-index: 900;
+    //width: inherit;
+    height: inherit;
+    text-align: center;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+    -ms-transform: rotateX(0deg) rotateY(0deg);
+    -ms-transform-style: preserve-3d;
+    -ms-backface-visibility: hidden;
+    /* -- transition is the magic sauce for animation -- */
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    border-style: none;
+  }
+  .card.flip .front {
+    z-index: 900;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+  }
+  .card .back {
+    position: absolute;
+    top: 0;
+    z-index: 800;
+    width: inherit;
+    height: inherit;
+    -webkit-transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -ms-transform: rotateY(-180deg);
+    -ms-transform-style: preserve-3d;
+    -ms-backface-visibility: hidden;
+    -moz-transform: rotateY(-180deg);
+    -moz-transform-style: preserve-3d;
+    -moz-backface-visibility: hidden;
+    /* -- transition is the magic sauce for animation -- */
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-color:#FFFFFF;
+    border-style: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .card.flip .back {
+    z-index: 1000;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -moz-transform: rotateX(0deg) rotateY(0deg);
+    -ms-transform: rotateX(0deg) rotateY(0deg);
+  }
+}
+
+//key information section
+.key_information_wrapper {
+  padding: 60px 10%;
+  background: url('/sites/all/themes/masterclass/Images/Info_background.png') no-repeat center;
+  background-size: cover;
+
+  @media(min-width: $screen-md-min) {
+    background: url('/sites/all/themes/masterclass/Images/Info_background.png') no-repeat 0 top;
+  }
+
+  @media(min-width: $screen-lg-min) {
+    background: url('/sites/all/themes/masterclass/Images/Info_background.png') no-repeat right fixed;
+  }
+
+  .col-md-6 {
+    text-align: center;
+
+    @media(min-width: $screen-md-min) {
+      text-align: left;
+    }
+  }
+
+  a {
+    color: $text-color-highlight;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: darken($text-color-highlight, 20%);
+    }
+  }
+}
+
+.section_wrapper {
+  margin-bottom: 60px;
+
+  .col-md-3 {
+    padding-left: 0;
+  }
+
+  img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  h4 {
+    @extend %section-heading-font;
+    padding-top: 10px;
+  }
+
+  p {
+    @extend %base-font;
+  }
+}
+
+.twitter_wrapper {
+  background-color: $background-light;
+  text-align: center;
+}
+
+.top_tips_wrapper {
+  background: url('/sites/all/themes/masterclass/Images/top_tips.png') no-repeat center fixed;
+  background-size: cover;
+  overflow: hidden;
+  padding: 55px 0;
+
+  @media(min-width: $screen-md-min) {
+    background: url('/sites/all/themes/masterclass/Images/top_tips.png') no-repeat center;
+  }
+
+  .tile {
+    background-color: $background-light;
+    padding: 15px;
+    border: 3px solid $border--b;
+    margin: 30px 0;
+    position: relative;
+
+    h4 {
+      @extend %heading-font;
+      margin: 0 0 10px 0;
+    }
+
+    a {
+      display: block;
+      margin-top: 20px;
+      position: relative;
+      width: 100%;
+    }
+  }
+}
+
+
+
+
+
+
+

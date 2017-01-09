@@ -1,0 +1,122 @@
+body {
+  @extend %base-font;
+  background-color: $background-default;
+  color: $text-color-default;
+  font-family: "Lato-Regular", sans-serif;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.custom-container {
+  margin: 0 10%;
+}
+
+.row-centered {
+  text-align: center;
+
+  .col-centered {
+    display: block;
+    float: none;
+
+    @media(min-width: $screen-md-min) {
+      display: inline-block;
+    }
+  }
+
+  .col-right {
+    display: inline-block;
+
+    @media(min-width: $screen-sm-min) {
+      float: none;
+      margin-left: -2px;
+    }
+
+    @media(min-width: $screen-md-min) {
+      float: right;
+      margin-left: 0;
+    }
+  }
+}
+
+.sub-page__background {
+  background: url(../Images/footer_lodyas.png) fixed center;
+  background-size: contain;
+  color: $text-color-inverse;
+
+  h3 {
+    @extend %subtitle-font;
+    margin: 0 0 30px 0;
+  }
+}
+
+.ppt {
+  display: none;
+
+  @media  (min-device-width: $screen-lg){
+    display: block;
+  }
+}
+
+.pdf {
+  display: block;
+
+  @media  (min-device-width: $screen-lg){
+    display: none;
+  }
+}
+
+.description_wrapper {
+  text-align: center;
+
+  h2 {
+    @extend %title-font;
+    margin: 60px 0 30px 0;
+  }
+
+  p {
+    @extend %caption-font;
+    margin-bottom: 60px;
+  }
+}
+
+.speaker_title {
+  margin: 0;
+}
+
+.profile_buttons {
+  padding: 30px 0;
+
+  a {
+    opacity: 0;
+    display: inline-flex;
+    height: 30px;
+    width: 45px;
+  }
+}
+
+.linkedIn,
+.email,
+.spark {
+  display: inline-block;
+}
+
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}

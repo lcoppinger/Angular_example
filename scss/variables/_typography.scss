@@ -1,0 +1,106 @@
+
+//font-size
+
+$base-font-size--xs: 16px;
+$base-font-size--sm: $base-font-size--xs;
+$base-font-size--md: 18px;
+$base-font-size--lg: $base-font-size--md;
+
+$title-font-size--xs: 28px;
+$title-font-size--sm: $title-font-size--xs;
+$title-font-size--md: 63px;
+$title-font-size--lg: $title-font-size--md;
+
+$subtitle-font-size--xs: 18px;
+$subtitle-font-size--sm: $subtitle-font-size--xs;
+$subtitle-font-size--md: 24px;
+$subtitle-font-size--lg: $subtitle-font-size--md;
+
+$section-heading-font-size--xs: 24px;
+$section-heading-font-size--sm: $section-heading-font-size--xs;
+$section-heading-font-size--md: $section-heading-font-size--xs;
+$section-heading-font-size--lg: $section-heading-font-size--xs;
+
+$heading-font-size--xs: 16px;
+$heading-font-size--sm: $heading-font-size--xs;
+$heading-font-size--md: 20px;
+$heading-font-size--lg: $heading-font-size--md;
+
+$featurette-font-size--xs: 28px;
+$featurette-font-size--sm: $title-font-size--xs;
+$featurette-font-size--md: 36px;
+$featurette-font-size--lg: $title-font-size--md;
+
+
+
+// Default font families
+
+$light__font-family__Lato: 'Lato-Light', Arial, sans-serif;
+$regular__font-family__Lato: 'Lato-Regular', sans-serif;
+$bold__font-family__Lato: 'Lato-Bold', Arial, sans-serif;
+
+$regular__font-family__Slabo: 'Slabo-Regular', Georgia, serif;
+$bold__font-family__Slabo: 'Slabo-Bold', Georgia, serif;
+
+body {
+  font-family: $regular__font-family__Lato;
+}
+
+@mixin make_font_style($font-size) {
+  font-size: $font-size;
+}
+
+%base-font {
+  @include make_font_style($base-font-size--xs);
+
+  @media(min-width: $screen-md-min) {
+    @include make_font_style($base-font-size--md);
+  }
+}
+
+%title-font {
+  @include make_font_style($title-font-size--xs);
+  font-family: $regular__font-family__Slabo;
+
+  @media(min-width: $screen-md-min) {
+    @include make_font_style($title-font-size--md);
+  }
+}
+
+%subtitle-font {
+  @include make_font_style($subtitle-font-size--xs);
+  font-family: $regular__font-family__Slabo;
+
+  @media(min-width: $screen-md-min) {
+    @include make_font_style($subtitle-font-size--md);
+  }
+}
+
+%heading-font {
+  @include make_font_style($heading-font-size--xs);
+  font-family: $regular__font-family__Lato;
+
+  @media(min-width: $screen-md-min) {
+    @include make_font_style($heading-font-size--md);
+  }
+}
+
+%caption-font {
+  @extend %heading-font;
+  font-family: $light__font-family__Lato;
+}
+
+%featurette-font {
+  @include make_font_style($featurette-font-size--xs);
+  font-family: $light__font-family__Lato;
+
+  @media(min-width: $screen-md-min) {
+    @include make_font_style($featurette-font-size--md);
+  }
+}
+
+%section-heading-font {
+  @include make_font_style($section-heading-font-size--xs);
+  font-family: $regular__font-family__Slabo;
+}
+

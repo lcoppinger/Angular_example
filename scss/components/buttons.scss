@@ -1,0 +1,76 @@
+.button_primary,
+.button-primary {
+  @extend %base-font;
+  font-family: $regular__font-family__Slabo;
+  background-color: $button-color-default__background;
+  padding: 10px 15px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  color: $text-color-inverse;
+  outline: none;
+
+  a {
+    color: $button-color-default__color;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover,
+    :focus,
+    :active {
+      color: $button-color-default__color;
+      text-decoration: none;
+    }
+  }
+
+  &:hover,
+  :focus,
+  :active {
+    background-color: darken($button-color-default__background, 20%);
+    color: $button-color-default__color;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+.button_secondary {
+  @extend .button_primary;
+  background-color: $button-color-inverse__background;
+  color: $button-color-inverse__color;
+
+  a {
+    color: $button-color-inverse__color;
+    cursor: pointer;
+  }
+
+  &:hover,
+  :focus,
+  :active {
+    background-color: darken($button-color-inverse__background, 20%);
+  }
+}
+
+.scrollToTop {
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background: url('../Images/Backtotop.svg') no-repeat center;
+  background-size: cover;
+  text-align: center;
+  -webkit-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  z-index: 1000;
+
+  &:hover,
+  :focus,
+  :active {
+    background: url('../Images/Backtotop_hover.svg') no-repeat center;
+    background-size: cover;
+  }
+}

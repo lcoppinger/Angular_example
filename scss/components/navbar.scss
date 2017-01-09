@@ -1,0 +1,32 @@
+.navbar {
+  height: 75px;
+  border: none;
+  border-bottom: 5px solid $border--b;
+  border-radius: 0;
+  background-color: $background-default;
+  margin-bottom: 0;
+
+  .logo {
+    margin: 0;
+
+    img {
+      height: 75px;
+    }
+  }
+}
+
+.navbar__links {
+  margin-top:10px;
+
+  .nav > li > a {
+    color: $text-color-default;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $background-default;
+      color: $text-color-highlight;
+      outline: none;
+    }
+  }
+}

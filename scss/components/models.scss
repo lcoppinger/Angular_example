@@ -1,0 +1,9 @@
+.modal-content,.modal-dialog, .modal-lg {
+  border-radius: 0;
+  background-color: $background-modal;
+
+  .modal-title{
+    @extend %featurette-font;
+    text-align: center;
+  }
+}

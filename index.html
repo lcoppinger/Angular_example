@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Digital Masterclass</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--plugin css-->
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css"/>
+    <link rel="stylesheet" href="videojs/css/video-js.min.css"/>
+
+    <!--css-->
+    <link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body ng-app="myApp">
+    <nav role="navigation" class="navbar navbar-fixed">
+        <div class="custom-container">
+            <div class="navbar-header">
+                <a class="logo navbar-btn pull-left" href="/" title="Home">
+                    <img src="#" alt="Home">
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse navbar-right navbar__links">
+                <ul class="menu nav navbar-nav"><li class="first leaf active"><a href="/" class="active">Home</a></li>
+                    <li class="leaf"><a href="#" title="">Presentations</a></li>
+                    <li class="leaf"><a href="#" title="">Case Studies</a></li>
+                    <li class="last leaf"><a href="Contacts.html" title="">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 no-padding">
+                <div class="vidContain">
+                    <div class="vid">
+                        <video id="home_intro_video" class="video-js vjs-default-skin vjs-big-play-centered"
+                               width="auto" height="650"
+                               poster="Images/poster.jpg" data-setup='{ "controls": false, "autoplay": true, "preload": "auto", "loop": true, "muted" : true}'>
+
+                            <source src="http://pwc-uk.edgesuite.net/pwc/uk/WIB/drone-bee-loop-new-WIB-hp-800k-dark-noaudio.mp4"  type='video/mp4' />
+
+                        </video>
+                    </div>
+                    <div class="custom-container">
+                        <div class="header_wrapper">
+                            <div class="header">
+                                <div class="Digital">
+                                    <h1>Digital</h1>
+                                </div>
+                                <div class="Masterclass">
+                                    <h1>Masterclass</h1>
+                                </div>
+                                <div class="caption">
+                                    <h3>Helping our clients create a business model for the Digital Age</h3>
+                                </div>
+                            </div>
+                            <div class="intro">
+                                <h3>The Digital Masterclass is a full-day event to showcase our digital capabilities, explore emerging technologies and examine how our clients should embrace the Digital Age</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sections_wrapper">
+                        <div class="custom-container">
+                            <div class="col-md-3 col-sm-6 homepage-sections">
+                                <h3 class="section-title">Register interest for our upcoming events</h3>
+                                <p class="description">Future Events: 21st July 2016, 26th September 2016</p>
+                                <div class="button_primary">
+                                    <a href="#" class="btn-primary--link">Register Interest</a>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 homepage-sections">
+                                <h3 class="section-title">Upcoming Masterclass agenda</h3>
+                                <p class="description">Upcoming Masterclass: 27th June 2016</p>
+                                <div class="button_primary">
+                                    <a href="#" class="btn-primary--link">Latest Agenda</a>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 homepage-sections">
+                                <h3 class="section-title">Digital Learning & Top Tips</h3>
+                                <p class="description">Our top digital hints and tips to help you improve</p>
+                                <div class="button_primary">
+                                    <a href="#" class="btn-primary--link">Learn More</a>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 homepage-sections">
+                                <h3 class="section-title">Key Information for the day</h3>
+                                <p class="description">Find the venue details, slido sign in and wifi</p>
+                                <div class="button_primary">
+                                    <a href="#" class="btn-primary--link">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider" id="featurettes">
+        <h2>Featured Content</h2>
+        <div class="arrow"></div>
+    </div>
+    <div class="custom-container">
+        <div class="row">
+            <div class="col-md-4 featurette">
+                <img class="img-circle" data-wow-duration="1.0s" src="Images/interactive_games.png" alt="Speakers_image">
+                <h2>Speakers</h2>
+                <p>View our speakers for the day and connect with them on Spark and LinkedIn.</p>
+                <button type="button" class="button_primary" data-toggle="modal" data-target=".speaker-modal">View more</button>
+                <div class="modal fade speaker-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Speakers for the Day</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row row-centered" ng-controller="SpeakerController as store">
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-centered" ng-repeat="product in store.products">
+                                        <div class="hover card">
+                                            <div class="front background__speakers">
+                                                <div class="pad">
+                                                    <img ng-src="{{product.image}}"/>
+                                                    <h4>{{product.name}}</h4>
+                                                </div>
+                                            </div>
+                                            <div class="back">
+                                                <div class="pad">
+                                                    <h4>{{product.title}}</h4>
+                                                    <p>{{product.description}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="Contacts.html" class="button-primary">More details</a>
+                                <button type="button" class="button_secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 featurette">
+                <img class="img-circle" data-wow-duration="1.5s" src="Images/newspapers.png" alt="Presentations_image">
+                <h2>Presentations</h2>
+                <p>Find the materials from the day as well as networking information on our speakers.</p>
+                <button type="button" class="button_primary" data-toggle="modal" data-target=".presentations-modal">View more</button>
+                <div class="modal fade presentations-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Presentations for the Day</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row row-centered" ng-controller="PresController as store">
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-centered" ng-repeat="product in store.products">
+                                        <div class="hover card">
+                                            <div class="front background__pres">
+                                                <div class="pad">
+                                                    <img ng-src="{{product.image}}"/>
+                                                    <h4>{{product.title}}</h4>
+                                                </div>
+                                            </div>
+                                            <div class="back">
+                                                <div class="pad">
+                                                    <h4>{{product.name}}</h4>
+                                                    <p>{{product.description}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="button_secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 featurette">
+                <img class="img-circle" data-wow-duration="2.0s" src="Images/internet.png" alt="Case-study_image">
+                <h2>Case Studies</h2>
+                <p>Have a look at each of our case studies before selecting those you would like to view.</p>
+                <button type="button" class="button_primary" data-toggle="modal" data-target=".case-studies-modal">View more</button>
+                <div class="modal fade case-studies-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Case Studies for the Day</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row row-centered" ng-controller="CaseController as store">
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-centered" ng-repeat="product in store.products">
+                                        <div class="hover card">
+                                            <div class="front background__pres">
+                                                <div class="pad">
+                                                    <img ng-src="{{product.image}}"/>
+                                                    <h4>{{product.title}}</h4>
+                                                </div>
+                                            </div>
+                                            <div class="back">
+                                                <div class="pad">
+                                                    <p>{{product.description}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="button_secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="divider" id="information">
+        <h2>Key Information for the day</h2>
+        <div class="arrow"></div>
+    </div>
+    <div class="key_information_wrapper">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section_wrapper col-md-12">
+                    <div class="col-md-6 col-lg-4">
+                        <img src="Images/Venue.png" alt="Venue icon"/>
+                    </div>
+                    <div class="col-md-6 col-lg-8">
+                        <h4>Venue</h4>
+                        <p>Consectetur adipiscing elit <br> Donec aliquam elit accumsan</p>
+                    </div>
+                </div>
+                <div class="section_wrapper col-md-12">
+                    <div class="col-md-6 col-lg-4">
+                        <img src="Images/Slido%20icon.png" alt="Venue icon"/>
+                    </div>
+                    <div class="col-md-6 col-lg-8">
+                        <h4>Interactive Q&A</h4>
+                        <p>
+                            <a href="www.slido/home">www.slido/home</a> <br>
+                            Event code: #digmasterclass
+                        </p>
+                    </div>
+                </div>
+                <div class="section_wrapper col-md-12">
+                    <div class="col-md-6 col-lg-4">
+                        <img src="Images/Wifi.png" alt="Venue icon"/>
+                    </div>
+                    <div class="col-md-6 col-lg-8">
+                        <h4>Wifi details</h4>
+                        <p>Network: abcvenue <br> Password: wifi1234</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <a class="twitter-timeline" href="https://twitter.com/hashtag/pwcdigitalmasterclass" data-widget-id="580720596088201216">#pwcdigitalmasterclass Tweets</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+        </div>
+    </div>
+    <div class="divider" id="tips">
+        <h2>Digital Learning and Top Tips</h2>
+        <div class="arrow"></div>
+    </div>
+    <div class="top_tips_wrapper">
+        <div class="custom-container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="tile">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam elit accumsan facilisis commodo.</h4>
+                        <a href="#" class="button-primary">View</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="tile">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam elit accumsan facilisis commodo.</h4>
+                        <a href="#" class="button-primary">View</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="tile">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam elit accumsan facilisis commodo.</h4>
+                        <a href="#" class="button-primary">View</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="tile">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam elit accumsan facilisis commodo.</h4>
+                        <a href="#" class="button-primary">View</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="tile">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam elit accumsan facilisis commodo.</h4>
+                        <a href="#" class="button-primary">View</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="tile">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam elit accumsan facilisis commodo.</h4>
+                        <a href="#" class="button-primary">View</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="tile">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam elit accumsan facilisis commodo.</h4>
+                        <a href="#" class="button-primary">View</a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="tile">
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam elit accumsan facilisis commodo.</h4>
+                        <a href="#" class="button-primary">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="custom-container">
+            <div class="row">
+                <div class="col-md-9">
+                    <p>© Quisque non tortor bibendum risus suscipit vulputate eget a diam. Duis in nibh bibendum, commodo turpis eu, molestie ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+                    <p>Made by Lisa Coppinger</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="#" alt="Home"/>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#" class="scrollToTop"></a>
+
+    <script src="js/vendor/angular.min.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/videojs/js/video.js"></script>
+    <script> //<!-- videojs flash fallback player for playing videos -->
+    videojs.options.flash.swf = "js/vendor/videojs/js/video-js.swf";
+    </script>
+    <script src="js/modules/app.js"></script>
+    <script src="js/even-height.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
