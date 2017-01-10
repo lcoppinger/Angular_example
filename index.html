@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--plugin css-->
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css"/>
-    <link rel="stylesheet" href="videojs/css/video-js.min.css"/>
+    <link rel="stylesheet" href="js/vendor/videojs/css/video-js.min.css"/>
 
     <!--css-->
     <link rel="stylesheet" href="css/style.css"/>
@@ -88,14 +88,14 @@
                                 <h3 class="section-title">Digital Learning & Top Tips</h3>
                                 <p class="description">Our top digital hints and tips to help you improve</p>
                                 <div class="button_primary">
-                                    <a href="#" class="btn-primary--link">Learn More</a>
+                                    <a href="#information" class="btn-primary--link">Learn More</a>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6 homepage-sections">
                                 <h3 class="section-title">Key Information for the day</h3>
                                 <p class="description">Find the venue details, slido sign in and wifi</p>
                                 <div class="button_primary">
-                                    <a href="#" class="btn-primary--link">Learn More</a>
+                                    <a href="#tips" class="btn-primary--link">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -111,10 +111,10 @@
     <div class="custom-container">
         <div class="row">
             <div class="col-md-4 featurette">
-                <img class="img-circle" data-wow-duration="1.0s" src="Images/interactive_games.png" alt="Speakers_image">
-                <h2>Speakers</h2>
-                <p>View our speakers for the day and connect with them on Spark and LinkedIn.</p>
-                <button type="button" class="button_primary" data-toggle="modal" data-target=".speaker-modal">View more</button>
+                <img class="img-circle wow animated fadeInUp" data-wow-duration="1.0s" src="Images/interactive_games.png" alt="Speakers_image">
+                <h2 class="wow animated fadeInUp">Speakers</h2>
+                <p class="wow animated fadeInUp">View our speakers for the day and connect with them on Spark and LinkedIn.</p>
+                <button type="button" class="button_primary wow animated fadeInUp" data-toggle="modal" data-target=".speaker-modal">View more</button>
                 <div class="modal fade speaker-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -151,10 +151,10 @@
                 </div>
             </div>
             <div class="col-md-4 featurette">
-                <img class="img-circle" data-wow-duration="1.5s" src="Images/newspapers.png" alt="Presentations_image">
-                <h2>Presentations</h2>
-                <p>Find the materials from the day as well as networking information on our speakers.</p>
-                <button type="button" class="button_primary" data-toggle="modal" data-target=".presentations-modal">View more</button>
+                <img class="img-circle wow animated fadeInUp" data-wow-duration="1.5s" src="Images/newspapers.png" alt="Presentations_image">
+                <h2 class="wow animated fadeInUp" data-wow-duration="1.5s">Presentations</h2>
+                <p class="wow animated fadeInUp" data-wow-duration="1.5s">Find the materials from the day as well as networking information on our speakers.</p>
+                <button type="button" class="button_primary wow animated fadeInUp" data-wow-duration="1.5s" data-toggle="modal" data-target=".presentations-modal">View more</button>
                 <div class="modal fade presentations-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -190,10 +190,10 @@
                 </div>
             </div>
             <div class="col-md-4 featurette">
-                <img class="img-circle" data-wow-duration="2.0s" src="Images/internet.png" alt="Case-study_image">
-                <h2>Case Studies</h2>
-                <p>Have a look at each of our case studies before selecting those you would like to view.</p>
-                <button type="button" class="button_primary" data-toggle="modal" data-target=".case-studies-modal">View more</button>
+                <img class="img-circle wow animated fadeInUp" data-wow-duration="2.0s" src="Images/internet.png" alt="Case-study_image">
+                <h2 class="wow animated fadeInUp" data-wow-duration="2.0s">Case Studies</h2>
+                <p class="wow animated fadeInUp" data-wow-duration="2.0s">Have a look at each of our case studies before selecting those you would like to view.</p>
+                <button type="button" class="button_primary wow animated fadeInUp" data-wow-duration="2.0s" data-toggle="modal" data-target=".case-studies-modal">View more</button>
                 <div class="modal fade case-studies-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -353,6 +353,7 @@
     <script> //<!-- videojs flash fallback player for playing videos -->
     videojs.options.flash.swf = "js/vendor/videojs/js/video-js.swf";
     </script>
+    <script src="js/vendor/wow.min.js"></script>
     <script src="js/modules/app.js"></script>
     <script src="js/even-height.js"></script>
     <script src="js/script.js"></script>
