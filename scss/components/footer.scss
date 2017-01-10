@@ -32,4 +32,12 @@
       color: darken($text-color-highlight, 20%);
     }
   }
+
+  .logo_wrapper {
+    text-align: right;
+
+    img {
+      height: 100px;
+    }
+  }
 }
