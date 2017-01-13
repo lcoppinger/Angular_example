@@ -35,72 +35,71 @@ $featurette-font-size--lg: $title-font-size--md;
 
 // Default font families
 
-$light__font-family__Lato: 'Lato-Light', Arial, sans-serif;
-$regular__font-family__Lato: 'Lato-Regular', sans-serif;
-$bold__font-family__Lato: 'Lato-Bold', Arial, sans-serif;
+$light--font-family--lato: 'Lato-Light', Arial, sans-serif;
+$regular--font-family--lato: 'Lato-Regular', sans-serif;
+$bold--font-family--lato: 'Lato-Bold', Arial, sans-serif;
 
-$regular__font-family__Slabo: 'Slabo-Regular', Georgia, serif;
-$bold__font-family__Slabo: 'Slabo-Bold', Georgia, serif;
+$regular--font-family--slabo: 'Slabo-Regular', Georgia, serif;
+$bold--font-family--slabo: 'Slabo-Bold', Georgia, serif;
 
 body {
-  font-family: $regular__font-family__Lato;
+  font-family: $regular--font-family--lato;
 }
 
-@mixin make_font_style($font-size) {
+@mixin make-font-style($font-size) {
   font-size: $font-size;
 }
 
 %base-font {
-  @include make_font_style($base-font-size--xs);
+  @include make-font-style($base-font-size--xs);
 
   @media(min-width: $screen-md-min) {
-    @include make_font_style($base-font-size--md);
+    @include make-font-style($base-font-size--md);
   }
 }
 
 %title-font {
-  @include make_font_style($title-font-size--xs);
-  font-family: $regular__font-family__Slabo;
+  @include make-font-style($title-font-size--xs);
+  font-family: $regular--font-family--slabo;
 
   @media(min-width: $screen-md-min) {
-    @include make_font_style($title-font-size--md);
+    @include make-font-style($title-font-size--md);
   }
 }
 
 %subtitle-font {
-  @include make_font_style($subtitle-font-size--xs);
-  font-family: $regular__font-family__Slabo;
+  @include make-font-style($subtitle-font-size--xs);
+  font-family: $regular--font-family--slabo;
 
   @media(min-width: $screen-md-min) {
-    @include make_font_style($subtitle-font-size--md);
+    @include make-font-style($subtitle-font-size--md);
   }
 }
 
 %heading-font {
-  @include make_font_style($heading-font-size--xs);
-  font-family: $regular__font-family__Lato;
+  @include make-font-style($heading-font-size--xs);
+  font-family: $regular--font-family--lato;
 
   @media(min-width: $screen-md-min) {
-    @include make_font_style($heading-font-size--md);
+    @include make-font-style($heading-font-size--md);
   }
 }
 
 %caption-font {
   @extend %heading-font;
-  font-family: $light__font-family__Lato;
+  font-family: $light--font-family--lato;
 }
 
 %featurette-font {
-  @include make_font_style($featurette-font-size--xs);
-  font-family: $light__font-family__Lato;
+  @include make-font-style($featurette-font-size--xs);
+  font-family: $light--font-family--lato;
 
   @media(min-width: $screen-md-min) {
-    @include make_font_style($featurette-font-size--md);
+    @include make-font-style($featurette-font-size--md);
   }
 }
 
 %section-heading-font {
-  @include make_font_style($section-heading-font-size--xs);
-  font-family: $regular__font-family__Slabo;
+  @include make-font-style($section-heading-font-size--xs);
+  font-family: $regular--font-family--slabo;
 }
-

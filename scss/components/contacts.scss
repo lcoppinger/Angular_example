@@ -1,23 +1,24 @@
-.block_case-studies {
+.block-case-studies,
+%block-case-studies {
   background-color: $background-case-study;
   color: $text-color-default;
-  padding: 15px 0;
-  overflow: hidden;
   margin-bottom: 30px;
+  overflow: hidden;
+  padding: 15px 0;
 
   .img-circle img {
-    width: 140px;
-    height: 140px;
     background-color: $background-default;
     border-radius: 50%;
     display: inline-block;
+    height: 140px;
+    width: 140px;
   }
 
   a {
     cursor: pointer;
   }
 
-  .linkedIn {
+  .linkedin {
     background: url('../Images/linkedin_icon_dark.svg') no-repeat center;
     background-size: auto 30px;
   }
@@ -28,19 +29,20 @@
   }
 }
 
-.catagory_wrapper {
+.catagory-wrapper {
   margin-bottom: 60px;
   overflow: hidden;
 }
 
-.contact__wrapper {
-  @extend .block_case-studies;
+.contact--wrapper {
+  @extend %block-case-studies;
 
   h4 {
     @extend %subtitle-font;
-    font-family: $regular__font-family__Lato;
+    font-family: $regular--font-family--lato;
   }
-  .profile_buttons {
+
+  .profile-buttons {
     padding-top: 10px;
   }
 }

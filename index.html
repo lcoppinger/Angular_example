@@ -14,11 +14,11 @@
     <link rel="stylesheet" href="css/style.css"/>
 
     <!-- favicons -->
-    <link rel='shortcut icon' type='image/x-icon' href='Images/favicon.ico'/>
-    <link rel="apple-touch-icon" sizes="57x57" href='Images/favicon.ico' />
-    <link rel="apple-touch-icon" sizes="72x72" href='Images/favicon.ico'/>
-    <link rel="apple-touch-icon" sizes="114x114" href='Images/favicon.ico' />
-    <link rel="apple-touch-icon" sizes="144x144" href='Images/favicon.ico'/>
+    <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="Images/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="Images/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="Images/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="Images/favicon.ico"/>
 
 </head>
 <body ng-app="myApp">
@@ -35,7 +35,7 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="navbar-collapse collapse navbar-right navbar__links">
+            <div class="navbar-collapse collapse navbar-right navbar--links">
                 <ul class="menu nav navbar-nav"><li class="first leaf active"><a href="/" class="active">Home</a></li>
                     <li class="disabled"><a href="#" title="">Presentations</a></li>
                     <li class="disabled"><a href="#" title="">Case Studies</a></li>
@@ -47,23 +47,23 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 no-padding">
-                <div class="vidContain">
+                <div class="vidcontain">
                     <div class="vid">
-                        <video id="home_intro_video" class="video-js vjs-default-skin vjs-big-play-centered"
+                        <video id="home-intro-video" class="video-js vjs-default-skin vjs-big-play-centered"
                                width="auto" height="650"
                                poster="Images/poster.jpg" data-setup='{ "controls": false, "autoplay": true, "preload": "auto", "loop": true, "muted" : true}'>
 
-                            <source src="http://pwc-uk.edgesuite.net/pwc/uk/WIB/drone-bee-loop-new-WIB-hp-800k-dark-noaudio.mp4"  type='video/mp4' />
+                            <source src="http://pwc-uk.edgesuite.net/pwc/uk/WIB/drone-bee-loop-new-WIB-hp-800k-dark-noaudio.mp4"  type="video/mp4" />
 
                         </video>
                     </div>
                     <div class="custom-container">
-                        <div class="header_wrapper">
+                        <div class="header-wrapper">
                             <div class="header">
-                                <div class="Digital">
+                                <div class="digital">
                                     <h1>Digital</h1>
                                 </div>
-                                <div class="Masterclass">
+                                <div class="masterclass">
                                     <h1>Masterclass</h1>
                                 </div>
                                 <div class="caption">
@@ -75,33 +75,33 @@
                             </div>
                         </div>
                     </div>
-                    <div class="sections_wrapper">
+                    <div class="sections-wrapper">
                         <div class="custom-container">
                             <div class="col-md-3 col-sm-6 homepage-sections">
                                 <h3 class="section-title">Register interest for our upcoming events</h3>
                                 <p class="description">Future Events: 21st July 2016, 26th September 2016</p>
-                                <div class="button_primary">
+                                <div class="button-primary">
                                     <a href="#" class="btn-primary--link">Register Interest</a>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6 homepage-sections">
                                 <h3 class="section-title">Upcoming Masterclass agenda</h3>
                                 <p class="description">Upcoming Masterclass: 27th June 2016</p>
-                                <div class="button_primary">
+                                <div class="button-primary">
                                     <a href="#" class="btn-primary--link">Latest Agenda</a>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6 homepage-sections">
                                 <h3 class="section-title">Digital Learning & Top Tips</h3>
                                 <p class="description">Our top digital hints and tips to help you improve</p>
-                                <div class="button_primary">
+                                <div class="button-primary">
                                     <a href="#information" class="btn-primary--link">Learn More</a>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6 homepage-sections">
                                 <h3 class="section-title">Key Information for the day</h3>
                                 <p class="description">Find the venue details, slido sign in and wifi</p>
-                                <div class="button_primary">
+                                <div class="button-primary">
                                     <a href="#tips" class="btn-primary--link">Learn More</a>
                                 </div>
                             </div>
@@ -120,8 +120,8 @@
             <div class="col-md-4 featurette">
                 <img class="img-circle wow animated fadeInUp" data-wow-duration="1.0s" src="Images/interactive_games.png" alt="Speakers_image">
                 <h2 class="wow animated fadeInUp">Speakers</h2>
-                <p class="wow animated fadeInUp">View our speakers for the day and connect with them on Spark and LinkedIn.</p>
-                <button type="button" class="button_primary wow animated fadeInUp" data-toggle="modal" data-target=".speaker-modal">View more</button>
+                <p class="wow animated fadeInUp">View our speakers for the day and connect with them on Spark and linkedin.</p>
+                <button type="button" class="button-primary wow animated fadeInUp" data-toggle="modal" data-target=".speaker-modal">View more</button>
                 <div class="modal fade speaker-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -133,7 +133,7 @@
                                 <div class="row row-centered" ng-controller="SpeakerController as store">
                                     <div class="col-xs-12 col-sm-6 col-md-4 col-centered" ng-repeat="product in store.products">
                                         <div class="hover card">
-                                            <div class="front background__speakers">
+                                            <div class="front background--speakers">
                                                 <div class="pad">
                                                     <img ng-src="{{product.image}}"/>
                                                     <h4>{{product.name}}</h4>
@@ -151,7 +151,7 @@
                             </div>
                             <div class="modal-footer">
                                 <a href="Contacts.html" class="button-primary">More details</a>
-                                <button type="button" class="button_secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="button-secondary" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -161,7 +161,7 @@
                 <img class="img-circle wow animated fadeInUp" data-wow-duration="1.5s" src="Images/newspapers.png" alt="Presentations_image">
                 <h2 class="wow animated fadeInUp" data-wow-duration="1.5s">Presentations</h2>
                 <p class="wow animated fadeInUp" data-wow-duration="1.5s">Find the materials from the day as well as networking information on our speakers.</p>
-                <button type="button" class="button_primary wow animated fadeInUp" data-wow-duration="1.5s" data-toggle="modal" data-target=".presentations-modal">View more</button>
+                <button type="button" class="button-primary wow animated fadeInUp" data-wow-duration="1.5s" data-toggle="modal" data-target=".presentations-modal">View more</button>
                 <div class="modal fade presentations-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -173,7 +173,7 @@
                                 <div class="row row-centered" ng-controller="PresController as store">
                                     <div class="col-xs-12 col-sm-6 col-md-4 col-centered" ng-repeat="product in store.products">
                                         <div class="hover card">
-                                            <div class="front background__pres">
+                                            <div class="front background--pres">
                                                 <div class="pad">
                                                     <img ng-src="{{product.image}}"/>
                                                     <h4>{{product.title}}</h4>
@@ -190,7 +190,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="button_secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="button-secondary" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -200,7 +200,7 @@
                 <img class="img-circle wow animated fadeInUp" data-wow-duration="2.0s" src="Images/internet.png" alt="Case-study_image">
                 <h2 class="wow animated fadeInUp" data-wow-duration="2.0s">Case Studies</h2>
                 <p class="wow animated fadeInUp" data-wow-duration="2.0s">Have a look at each of our case studies before selecting those you would like to view.</p>
-                <button type="button" class="button_primary wow animated fadeInUp" data-wow-duration="2.0s" data-toggle="modal" data-target=".case-studies-modal">View more</button>
+                <button type="button" class="button-primary wow animated fadeInUp" data-wow-duration="2.0s" data-toggle="modal" data-target=".case-studies-modal">View more</button>
                 <div class="modal fade case-studies-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -212,7 +212,7 @@
                                 <div class="row row-centered" ng-controller="CaseController as store">
                                     <div class="col-xs-12 col-sm-6 col-md-4 col-centered" ng-repeat="product in store.products">
                                         <div class="hover card">
-                                            <div class="front background__pres">
+                                            <div class="front background--pres">
                                                 <div class="pad">
                                                     <img ng-src="{{product.image}}"/>
                                                     <h4>{{product.title}}</h4>
@@ -228,7 +228,7 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="button_secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="button-secondary" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -240,10 +240,10 @@
         <h2>Key Information for the day</h2>
         <div class="arrow"></div>
     </div>
-    <div class="key_information_wrapper">
+    <div class="key-information-wrapper">
         <div class="row">
             <div class="col-md-6">
-                <div class="section_wrapper col-md-12">
+                <div class="section-wrapper col-md-12">
                     <div class="col-md-6 col-lg-4">
                         <img src="Images/Venue.png" alt="Venue icon"/>
                     </div>
@@ -252,7 +252,7 @@
                         <p>Consectetur adipiscing elit <br> Donec aliquam elit accumsan</p>
                     </div>
                 </div>
-                <div class="section_wrapper col-md-12">
+                <div class="section-wrapper col-md-12">
                     <div class="col-md-6 col-lg-4">
                         <img src="Images/Slido%20icon.png" alt="Venue icon"/>
                     </div>
@@ -264,7 +264,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="section_wrapper col-md-12">
+                <div class="section-wrapper col-md-12">
                     <div class="col-md-6 col-lg-4">
                         <img src="Images/Wifi.png" alt="Venue icon"/>
                     </div>
@@ -284,7 +284,7 @@
         <h2>Digital Learning and Top Tips</h2>
         <div class="arrow"></div>
     </div>
-    <div class="top_tips_wrapper">
+    <div class="top-tips-wrapper">
         <div class="custom-container">
             <div class="row">
                 <div class="col-md-3 col-sm-6">
@@ -345,7 +345,7 @@
                     <p>© Quisque non tortor bibendum risus suscipit vulputate eget a diam. Duis in nibh bibendum, commodo turpis eu, molestie ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
                     <p>Made by Lisa Coppinger</p>
                 </div>
-                <div class="col-md-3 logo_wrapper">
+                <div class="col-md-3 logo-wrapper">
                     <img src="Images/Logo.svg" alt="Home"/>
                 </div>
             </div>

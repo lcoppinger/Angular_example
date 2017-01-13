@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="css/style.css"/>
 
     <!-- favicons -->
-    <link rel='shortcut icon' type='image/x-icon' href='Images/favicon.ico'/>
-    <link rel="apple-touch-icon" sizes="57x57" href='Images/favicon.ico' />
-    <link rel="apple-touch-icon" sizes="72x72" href='Images/favicon.ico'/>
-    <link rel="apple-touch-icon" sizes="114x114" href='Images/favicon.ico' />
-    <link rel="apple-touch-icon" sizes="144x144" href='Images/favicon.ico'/>
+    <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="Images/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="Images/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="Images/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="Images/favicon.ico"/>
 
 </head>
 <body ng-app="myApp">
@@ -34,7 +34,7 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="navbar-collapse collapse navbar-right navbar__links">
+            <div class="navbar-collapse collapse navbar-right navbar--links">
                 <ul class="menu nav navbar-nav"><li class="first leaf active"><a href="index.html">Home</a></li>
                     <li class="disabled"><a href="#" title="Presentations">Presentations</a></li>
                     <li class="disabled"><a href="#" title="Case Studies">Case Studies</a></li>
@@ -43,25 +43,25 @@
             </div>
         </div>
     </nav>
-    <div class="sub-page__background">
+    <div class="sub-page--background">
         <div class="custom-container">
-            <div class="row description_wrapper">
+            <div class="row description-wrapper">
                 <h2>Contacts</h2>
                 <p>Tap into our extensive global digital expertise, and get in touch with SME’s within the business who can help answer questions on how digital can affect both your client industry and the potential opportunities you may face.</p>
             </div>
             <div class="row key_contacts_wrapper">
                 <h3>Global contacts</h3>
-                <div class="catagory_wrapper" ng-controller="ContactCtrl">
+                <div class="catagory-wrapper" ng-controller="ContactCtrl">
                     <div class="col-md-4" ng-repeat="product in products">
-                        <div class="contact__wrapper">
+                        <div class="contact--wrapper">
                             <div class="col-md-6 col-sm-6 col-xs-6">
                                 <img class="img-circle" ng-src="{{product.image}}"/>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-6">
                                 <h4>{{product.name}}</h4>
                                 <p class="contact_title">{{product.title}}</p>
-                                <div class="profile_buttons">
-                                    <div class="linkedIn hvr-grow">
+                                <div class="profile-buttons">
+                                    <div class="linkedin hvr-grow">
                                         <a href="#"></a>
                                     </div>
                                     <div class="email hvr-grow">
@@ -85,7 +85,7 @@
                     <p>© Quisque non tortor bibendum risus suscipit vulputate eget a diam. Duis in nibh bibendum, commodo turpis eu, molestie ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
                     <p>Made by Lisa Coppinger</p>
                 </div>
-                <div class="col-md-3 logo_wrapper">
+                <div class="col-md-3 logo-wrapper">
                     <img src="Images/Logo.svg" alt="Home"/>
                 </div>
             </div>

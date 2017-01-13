@@ -4,7 +4,7 @@ $(document).ready(function(){
   if ($(window).width() >= 700) {
     EvenHeightHelper.makeEvenHeight('.homepage-sections');
   }
-  EvenHeightHelper.makeEvenHeight('.contact__wrapper');
+  EvenHeightHelper.makeEvenHeight('.contact--wrapper');
 
   //initiate wowjs
   new WOW().init();

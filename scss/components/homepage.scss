@@ -1,6 +1,6 @@
 //landing section styling
-.vidContain {
-  background: url("../Images/poster.jpg") no-repeat center;
+.vidcontain {
+  background: url('../Images/poster.jpg') no-repeat center;
   background-size: cover;
   margin-top: -1px;
 
@@ -13,14 +13,14 @@
     }
   }
 
-  #home_intro_video {
+  #home-intro-video {
     transform: scale(1.5);
   }
 
-  .header_wrapper {
-    position: relative;
-    top:0;
+  .header-wrapper {
     padding-top: 60px;
+    position: relative;
+    top: 0;
 
     h1 {
       @extend %title-font;
@@ -35,28 +35,28 @@
     }
   }
 
-  .Digital {
-    display: inline-block;
+  .digital {
     background-color: $background-dark;
     color: $text-color-inverse;
+    display: inline-block;
   }
 
-  .Masterclass {
-    display: inline-block;
+  .masterclass {
     background-color: $background-light;
     color: $text-color-default;
+    display: inline-block;
     margin-left: -3px;
   }
 
   .caption {
     @extend %caption-font;
     color: $text-color-inverse;
-    padding-top: 10px;
     margin-bottom: 36px;
+    padding-top: 10px;
 
     @media(min-width: $screen-lg-min) {
-      width: 550px;
       padding: 10px 0;
+      width: 550px;
     }
   }
 
@@ -69,13 +69,13 @@
     }
   }
 
-  .sections_wrapper {
-    overflow: hidden;
-    bottom: 0;
-    position: relative;
+  .sections-wrapper {
     background-color: $background-dark;
+    bottom: 0;
     color: $text-color-inverse;
+    overflow: hidden;
     padding: 30px 0;
+    position: relative;
     width: 100%;
 
     @media(min-width: $screen-sm-min) {
@@ -87,8 +87,8 @@
     }
 
     @media(min-width: $screen-lg-min) {
-      position: absolute;
       padding: 30px 0;
+      position: absolute;
     }
   }
 
@@ -103,7 +103,7 @@
 
     .description {
       @extend %base-font;
-      font-family: $light__font-family__Lato;
+      font-family: $light--font-family--lato;
       margin-bottom: 20px;
     }
 
@@ -112,22 +112,22 @@
     }
 
     &:last-child {
-      border-bottom: none;
+      border-bottom: 0;
     }
 
     @media(min-width: $screen-sm-min) {
-      border-bottom: none;
+      border-bottom: 0;
       padding: 0 30px 30px;
     }
 
     @media(min-width: $screen-md-min) {
+      border-bottom: 0;
       border-left: 1px solid $border--c;
-      border-bottom: none;
       padding: 0 30px;
 
       &:first-child {
+        border-left: 0;
         padding-left: 0;
-        border-left: none;
       }
     }
   }
@@ -136,10 +136,10 @@
 //section divider styling
 .divider {
   @extend %subtitle-font;
+  background-color: $background-divider;
   color: $text-color-inverse;
-  background-color:$background-divider;
-  text-align: center;
   padding: 10px;
+  text-align: center;
   z-index: 2;
 
   h2 {
@@ -147,13 +147,13 @@
   }
 
   .arrow {
-    width: 0;
-    height: 0;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
     border-top: 30px solid $background-divider;
-    position: absolute;
+    height: 0;
     left: 42%;
+    position: absolute;
+    width: 0;
 
     @media(min-width: $screen-sm-min) {
       left: 46%;
@@ -167,20 +167,20 @@
 
 //featurette section styling
 .featurette {
-  text-align: center;
   padding: 30px 0;
+  text-align: center;
 
   @media(min-width: $screen-md-min) {
     padding: 60px 0;
   }
 
   .img-circle {
-    width: 140px;
-    height: 140px;
     background-color: $off-white;
+    border: 3px solid $grey;
     border-radius: 50%;
     display: inline-block;
-    border: 3px solid $grey;
+    height: 140px;
+    width: 140px;
   }
 
   h2 {
@@ -189,7 +189,7 @@
 
   p {
     @extend %base-font;
-    font-family: $light__font-family__Lato;
+    font-family: $light--font-family--lato;
   }
 
   .col-centered {
@@ -197,15 +197,15 @@
   }
 
   .card {
+    background-color: $background-modal;
     height: 100%;
     position: relative;
-    background-color: $background-modal;
   }
 
   .pad {
     background-color: $background-default;
-    position: relative;
     height: 100%;
+    position: relative;
 
     img {
       height: 100%;
@@ -215,13 +215,13 @@
   .front {
     h4 {
       @extend %heading-font;
-      color: $text-color-inverse;
-      width: 100%;
+      background-color: $background-dark;
       bottom: 0;
+      color: $text-color-inverse;
       margin: 0;
       padding: 10px;
       position: absolute;
-      background-color: $background-dark;
+      width: 100%;
     }
   }
 
@@ -238,117 +238,74 @@
     p {
       margin-bottom: 3px;
     }
-
-    .internal_link a {
-      color: $text-color-highlight;
-
-      &:hover,
-      :focus,
-      :active {
-        color: darken($text-color-highlight, 20%);
-      }
-    }
   }
 
   //specific overrides
 
-  .background__speakers {
+  .background--speakers {
     width: 100%;
 
     img {
+      display: inline-block;
       height: 100%;
       width: auto;
-      display: inline-block;
     }
   }
 
-  .background__case {
-    img {
-      height: auto;
-      vertical-align: middle;
-      position: relative;
-      top: 20px;
-    }
-  }
-
-  .background__pres {
+  .background--pres {
     img {
       width: 100%;
     }
   }
 
   //flip
-  /* -- make sure to declare a default for every property that you want animated -- */
-  /* -- general styles, including Y axis rotation -- */
+  // -- make sure to declare a default for every property that you want animated
+  // -- general styles, including Y axis rotation
   .card .front {
-    position: absolute;
-    top: 0;
-    z-index: 900;
-    //width: inherit;
+    backface-visibility: hidden;
+    border-style: 0;
     height: inherit;
+    position: absolute;
     text-align: center;
-    -webkit-transform: rotateX(0deg) rotateY(0deg);
-    -webkit-transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    -moz-transform: rotateX(0deg) rotateY(0deg);
-    -moz-transform-style: preserve-3d;
-    -moz-backface-visibility: hidden;
-    -ms-transform: rotateX(0deg) rotateY(0deg);
-    -ms-transform-style: preserve-3d;
-    -ms-backface-visibility: hidden;
-    /* -- transition is the magic sauce for animation -- */
-    -o-transition: all .4s ease-in-out;
-    -ms-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
+    top: 0;
+    transform: rotateX(0deg) rotateY(0deg);
+    transform-style: preserve-3d;
     transition: all .4s ease-in-out;
-    border-style: none;
-  }
-  .card.flip .front {
     z-index: 900;
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
   }
+
+  .card.flip .front {
+    transform: rotateY(180deg);
+    z-index: 900;
+  }
+
   .card .back {
+    backface-visibility: hidden;
+    background-color: $background-default;
+    border-style: none;
+    height: inherit;
+    overflow-x: hidden;
+    overflow-y: scroll;
     position: absolute;
     top: 0;
-    z-index: 800;
-    width: inherit;
-    height: inherit;
-    -webkit-transform: rotateY(-180deg);
-    -webkit-transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    -ms-transform: rotateY(-180deg);
-    -ms-transform-style: preserve-3d;
-    -ms-backface-visibility: hidden;
-    -moz-transform: rotateY(-180deg);
-    -moz-transform-style: preserve-3d;
-    -moz-backface-visibility: hidden;
-    /* -- transition is the magic sauce for animation -- */
-    -o-transition: all .4s ease-in-out;
-    -ms-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
     transition: all .4s ease-in-out;
-    background-color:#FFFFFF;
-    border-style: none;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    width: inherit;
+    z-index: 800;
   }
+
   .card.flip .back {
+    transform: rotateX(0deg) rotateY(0deg);
     z-index: 1000;
-    -webkit-transform: rotateX(0deg) rotateY(0deg);
-    -moz-transform: rotateX(0deg) rotateY(0deg);
-    -ms-transform: rotateX(0deg) rotateY(0deg);
   }
 }
 
 //key information section
-.key_information_wrapper {
-  padding: 60px 10%;
+.key-information-wrapper {
   background: url('../Images/App_background.svg') no-repeat center;
   background-size: cover;
+  padding: 60px 10%;
 
   @media(min-width: $screen-md-min) {
     background: url('../Images/App_background.svg') no-repeat 0 top;
@@ -377,7 +334,7 @@
   }
 }
 
-.section_wrapper {
+.section-wrapper {
   margin-bottom: 60px;
 
   .col-md-3 {
@@ -385,10 +342,10 @@
   }
 
   img {
-    width: 140px;
-    height: 140px;
     border-radius: 50%;
     display: inline-block;
+    height: 140px;
+    width: 140px;
   }
 
   h4 {
@@ -401,12 +358,7 @@
   }
 }
 
-.twitter_wrapper {
-  background-color: $background-light;
-  text-align: center;
-}
-
-.top_tips_wrapper {
+.top-tips-wrapper {
   background: url('../Images/App_background_2.svg') no-repeat center;
   background-size: cover;
   overflow: hidden;
@@ -418,14 +370,14 @@
 
   .tile {
     background-color: $background-light;
-    padding: 15px;
     border: 3px solid $border--b;
     margin: 30px 0;
+    padding: 15px;
     position: relative;
 
     h4 {
       @extend %heading-font;
-      margin: 0 0 10px 0;
+      margin: 0 0 10px;
     }
 
     a {
@@ -436,10 +388,3 @@
     }
   }
 }
-
-
-
-
-
-
-

@@ -1,9 +1,9 @@
 .navbar {
-  height: 75px;
-  border: none;
+  background-color: $background-default;
+  border: 0;
   border-bottom: 5px solid $border--b;
   border-radius: 0;
-  background-color: $background-default;
+  height: 75px;
   margin-bottom: 0;
 
   .logo {
@@ -16,8 +16,8 @@
   }
 }
 
-.navbar__links {
-  margin-top:10px;
+.navbar--links {
+  margin-top: 10px;
 
   .nav > li > a {
     color: $text-color-default;

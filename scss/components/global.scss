@@ -40,14 +40,14 @@ body {
   }
 }
 
-.sub-page__background {
-  background: url(../Images/footer_lodyas.png) fixed center;
+.sub-page--background {
+  background: url('../Images/footer_lodyas.png') fixed center;
   background-size: contain;
   color: $text-color-inverse;
 
   h3 {
     @extend %subtitle-font;
-    margin: 0 0 30px 0;
+    margin: 0 0 30px;
   }
 }
 
@@ -67,12 +67,12 @@ body {
   }
 }
 
-.description_wrapper {
+.description-wrapper {
   text-align: center;
 
   h2 {
     @extend %title-font;
-    margin: 60px 0 30px 0;
+    margin: 60px 0 30px;
   }
 
   p {
@@ -81,50 +81,31 @@ body {
   }
 }
 
-.speaker_title {
-  margin: 0;
-}
-
-.profile_buttons {
-  padding: 30px 0;
-
-  a {
-    opacity: 0;
-    display: inline-flex;
-    height: 30px;
-    width: 45px;
-  }
-}
-
-.linkedIn,
+.linkedin,
 .email,
 .spark {
   display: inline-block;
 }
 
 .hvr-grow {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  display: inline-block;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-transition-property: transform;
+  transform: translateZ(0);
+  transition-duration: .2s;
   transition-property: transform;
+  vertical-align: middle;
 }
-.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
-  -webkit-transform: scale(1.2);
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
   transform: scale(1.2);
 }
 
 .animated {
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 

@@ -1,8 +1,8 @@
 
 //Digital Masterclass palette
 $grey: #707070;
-$off-white: #F0F0F0;
-$highlight: #EB5050;
+$off-white: #f0f0f0;
+$highlight: #eb5050;
 
 
 //Typography
@@ -12,19 +12,19 @@ $text-color-inverse: $off-white !default;
 $text-color-highlight: $highlight !default;
 
 //button
-$button-color-default__background: $highlight !default;
-$button-color-default__color: $off-white !default;
-$button-color-inverse__background: $grey !default;
-$button-color-inverse__color: $button-color-default__color !default;
+$button-color-default--background: $highlight !default;
+$button-color-default--color: $off-white !default;
+$button-color-inverse--background: $grey !default;
+$button-color-inverse--color: $button-color-default--color !default;
 
 
 //Backgrounds
 
-$background-default: #FFFFFF !default;
+$background-default: #fff !default;
 $background-light: rgba($off-white, .8) !default;
 $background-dark: rgba($grey, .8) !default;
 $background-divider: $grey !default;
-$background-modal: #E0E0E0 !default;
+$background-modal: #e0e0e0 !default;
 $background-case-study: $off-white !default;
 
 //Borders
@@ -32,4 +32,3 @@ $background-case-study: $off-white !default;
 $border--a: $grey !default;
 $border--b: $highlight !default;
 $border--c: $off-white !default;
-
